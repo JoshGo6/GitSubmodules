@@ -1,11 +1,11 @@
 # Submodules in Git
 
-When one repository requires files in another repository, access the required files by using Git's submodule capabilities. When you create a submodule in a Git repo, the submodule is actually a separate repo, so you have a *repo inside a repo*. You would use this functionality if you have one project that references another project -- for instance, multiple projects which utilize the same CSS or the same code for one module. This topic covers:
+When one repository requires files in another repository, access the required files by using Git's submodule capabilities. When you create a submodule in a Git repo, the submodule is actually a separate repo, so you have a *repo inside a repo*. You would use this functionality if you have one project that references another project -- for instance, multiple projects which utilize the same CSS or the same code from one module. This topic covers:
 
 - [Add a submodule to an existing repo](#add-a-submodule-to-an-existing-repo)
 - [Commit new submodule in parent repo](#commit-new-submodule-in-parent-repo)
 - [Clone a repo containing a submodule](#clone-a-repo-containing-a-submodule)
-    - [Pulling a submodule during a clone](#pulling-a-submodule-during-a-clone)
+    - [Pull a submodule during a clone](#pull-a-submodule-during-a-clone)
     - [Pull a submodule after a clone](#pull-a-submodule-after-a-clone)
 - [Update submodule with upstream changes](#update-submodule-with-upstream-changes)
     - [Update all submodules from default branches](#update-all-submodules-from-default-branches)
@@ -36,7 +36,7 @@ Receiving objects: 100% (45/45), 9.23 KiB | 858.00 KiB/s, done.
 Resolving deltas: 100% (14/14), done.
 ```
 
-Next, [Commit new submodule in parent repo](#commit-new-submodule-in-parent-repo).
+Next, [commit the new submodule in the parent repo](#commit-new-submodule-in-parent-repo).
 
 ## Commit new submodule in parent repo
 
@@ -76,9 +76,9 @@ Now the files in the submodule are ready for use.
 
 ## Clone a repo containing a submodule
 
-When you clone a repo containing a submodule, the submodule in the parent repo is not by default available for use after cloning. To get the files, you must run additional commands. (See [Pull a submodule after a clone](#pull-a-submodule-after-a-clone).) Avoid this issue by passing arguments to `git clone`. (See [Pulling a submodule during a clone](#pulling-a-submodule-during-a-clone).)
+When you clone a repo containing a submodule, the submodule in the parent repo is not by default available for use after cloning. To get the files, you must run additional commands. (See [Pull a submodule after a clone](#pull-a-submodule-after-a-clone).) Avoid this issue by passing arguments to `git clone`. (See [Pull a submodule during a clone](#pull-a-submodule-during-a-clone).)
 
-## Pulling a submodule during a clone
+## Pull a submodule during a clone
 
 The simplest way of using a submodule referenced in a remote repo is to clone it along with the parent repo, so that the submodule is immediately available.
 
@@ -121,7 +121,7 @@ To update all submodules with the latest changes to the remote repos, run the fo
 git submodule update --remote
 ```
 
-Now [Add and commit changes](#add-and-commit-changes).
+Now [add and commit the changes](#add-and-commit-changes).
 
 ### Update one submodule from default branch
 
@@ -131,7 +131,7 @@ To update just one submodule, run:
 git submodule update --remote <name of submodule>
 ```
 
-If you don't know the name of the submodule, see the `.gitmodules` file. Now [Add and commit changes](#add-and-commit-changes).
+If you don't know the name of the submodule, see the `.gitmodules` file. Now [add and commit the changes](#add-and-commit-changes).
 
 ### Update one submodule from specified branch
 
@@ -169,7 +169,7 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Now [Add and commit changes](#add-and-commit-changes).
+Now [add and commit the changes](#add-and-commit-changes).
 
 ### Configure branch and merge behavior for submodule updates
 
