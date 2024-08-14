@@ -1,0 +1,1 @@
+I read through the official documentation on Git submodules, but found it confusing, so I rewrote it completely so that I could refer to my documentation whenever I use Git submodules. This repository contains that documentation.
